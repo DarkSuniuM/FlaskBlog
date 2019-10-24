@@ -10,6 +10,8 @@ app.config.from_object(Development)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
+
+
 @app.route('/')
 def index():
     return "Blog Home."
