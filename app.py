@@ -15,5 +15,7 @@ def index():
     return "Blog Home."
 
 from mod_admin import admin
+from mod_users import users
 
 app.register_blueprint(admin)
+app.register_blueprint(users)
