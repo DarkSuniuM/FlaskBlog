@@ -6,7 +6,8 @@ We are going to develop a blog using Flask, Each episode, has it's own branch
 0. Project Directory | [Branch on Github](https://github.com/DarkSuniuM/FlaskBlog/tree/00-Project_Directory) | [Video On YouTube](https://youtu.be/wYYLs_yqJ_8)
 0. Admin Blueprint | [Branch on Github](https://github.com/DarkSuniuM/FlaskBlog/tree/01-Admin_Blueprint) | [Video On YouTube](https://youtu.be/dPB5N1Uk_Ik)
 0. Users Model | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/02-Users_Model) | [Video On YouTube](https://youtu.be/GNHlcw4yQjI)
-0. **Storing Passwords | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/03-Storing_Passwords) | [Video On YouTube](https://youtu.be/RENMu08Gt5Y)**
+0. Storing Passwords | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/03-Storing_Passwords) | [Video On YouTube](https://youtu.be/RENMu08Gt5Y)
+0. **Sessions | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/04-Sessions) | [Video On YouTube](https://youtu.be/yx2KnB3msZE)**
 
 
 
