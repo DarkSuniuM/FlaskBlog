@@ -1,4 +1,6 @@
-from flask import session
+from flask import session, render_template, request, abort
+from mod_users.forms import LoginForm
+from mod_users.models import User
 from . import admin
 
 
@@ -7,10 +9,20 @@ def index():
     return "Hello from admin Index"
 
 
-@admin.route('/login/')
+@admin.route('/login/', methods=['GET', 'POST'])
 def login():
-    session['name'] = 'Alireza'
-    # session.clear()
-    # print(session.get('name'))
-    print(session)
-    return "1"
+    form = LoginForm(request.form)
+    if request.method == 'POST':
+        if not form.validate_on_submit():
+            abort(400)
+        user = User.query.filter(User.email.ilike(f'{form.email.data}')).first()
+        if not user:
+            return "Incorrent Credentials", 400
+        if not user.check_password(form.password.data):
+            return "Incorrent Credentials", 400
+        session['email'] = user.email
+        session['user_id'] = user.id
+        return "Logged in successfully"
+    if session.get('email') is not None:
+        return "You are already logged in"
+    return render_template('admin/login.html', form=form)
