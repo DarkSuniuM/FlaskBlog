@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Admin Login</title>
+    </head>
+    <body>
+        <h1>Admin Login</h1>
+        <form action="{{ url_for('admin.login') }}" method="POST">
+            {{ form.hidden_tag() }}
+            Email: {{ form.email }} <br/>
+            Password: {{ form.password }} <br/>
+            <input type="submit" value="Login">
+        </form>
+    </body>
+</html>
