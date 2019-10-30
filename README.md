@@ -9,7 +9,8 @@ We are going to develop a blog using Flask, Each episode, has it's own branch
 0. Storing Passwords | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/03-Storing_Passwords) | [Video On YouTube](https://youtu.be/RENMu08Gt5Y)
 0. Sessions | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/04-Sessions) | [Video On YouTube](https://youtu.be/yx2KnB3msZE)
 0. Admin Login Page | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/05-Admin_Login_Page) | [Video On YouTube](https://youtu.be/nS6PnTu1XrQ)
-0. **Inheriting/Extending Templates | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/06-Inheriting/Extending_Templates) | [Video On YouTube](https://youtu.be/IPgkm-CgArE)**
+0. Inheriting/Extending Templates | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/06-Inheriting/Extending_Templates) | [Video On YouTube](https://youtu.be/IPgkm-CgArE)
+0. **Message Flashing | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/07-Message_Flashing) | [Video On YouTube](https://youtu.be/su4fQXjLTwI)**
 
 
 ## Setup and Run
