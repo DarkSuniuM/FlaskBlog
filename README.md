@@ -12,7 +12,7 @@ We are going to develop a blog using Flask, Each episode, has it's own branch
 0. Inheriting/Extending Templates | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/06-Inheriting/Extending_Templates) | [Video On YouTube](https://youtu.be/IPgkm-CgArE)
 0. Message Flashing | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/07-Message_Flashing) | [Video On YouTube](https://youtu.be/su4fQXjLTwI)
 0. PermissionBased Views | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/08-PermissionBased_Views) | [Video On YouTube](https://youtu.be/7mFvYbRQ6ec)
-0. **Showing Form Errors | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/09-Showing_Form_Errors) | [Video On YouTube](https://youtu.be/GUI9BWCG-qc)**
+0. Showing Form Errors | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/09-Showing_Form_Errors) | [Video On YouTube](https://youtu.be/GUI9BWCG-qc)
 0. **Handling SQLAlchemy Errors | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/10-Handling_SQLAlchemy_Errors) | [Video On YouTube](https://youtu.be/eAttPLeMFsU)**
 
 
