@@ -14,7 +14,7 @@ We are going to develop a blog using Flask, Each episode, has it's own branch
 0. PermissionBased Views | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/08-PermissionBased_Views) | [Video On YouTube](https://youtu.be/7mFvYbRQ6ec)
 0. Showing Form Errors | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/09-Showing_Form_Errors) | [Video On YouTube](https://youtu.be/GUI9BWCG-qc)
 0. Handling SQLAlchemy Errors | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/10-Handling_SQLAlchemy_Errors) | [Video On YouTube](https://youtu.be/eAttPLeMFsU)
-0. **Database Relations | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/11-Database_Relations) | [Video On YouTube](https://youtu.be/r7ez-nnmO2g)**
+0. **Database Relations | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/11-Database_Relations) | [Video On YouTube](https://youtu.be/Jnfg47tqAMk)**
 
 
 
