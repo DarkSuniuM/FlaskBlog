@@ -1,0 +1,14 @@
+{% extends 'admin/base.html' %}
+
+{% block title %}Create a new post{% endblock %}
+{% block page_content %}
+<h1>Create a new post</h1>
+<form action="{{ url_for('admin.create_post') }}" method="POST">
+    {{ form.hidden_tag() }}
+    Title: {{ form.title }}<br>
+    Slug: {{ form.slug }}<br>
+    Summary: {{ form.summary }}<br>
+    Content: {{ form.content }}<br>
+    <input type="submit" value="Create Post">
+</form>
+{% endblock %}
