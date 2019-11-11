@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <ul>
+        <li><a href="{{ url_for('admin.index') }}">Dashboard</a></li>
+        <li><a href="{{ url_for('admin.create_post') }}">Add new posts</a></li>
+        <li><a href="{{ url_for('admin.logout') }}">Logout</a></li>
+    </ul>
+</div>
+{% with messages = get_flashed_messages(True) %}
+{% if messages %}
+<div class="row">
+
+    {% for message in messages %}
+    <div class="card {{message[0]}}">
+        <div class="section">
+            <p>{{ message[1] }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+{% endwith %}
+{% block page_content %}
+{% endblock %}
+{% endblock %}
