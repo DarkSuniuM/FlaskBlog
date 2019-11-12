@@ -16,7 +16,8 @@ We are going to develop a blog using Flask, Each episode, has it's own branch
 0. Handling SQLAlchemy Errors | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/10-Handling_SQLAlchemy_Errors) | [Video On YouTube](https://youtu.be/eAttPLeMFsU)
 0. Database Relations | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/11-Database_Relations) | [Video On YouTube](https://youtu.be/Jnfg47tqAMk)
 0. Relations in SQLAlchemy | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/12-Relations_in_SQLAlchemy) | [Video On YouTube](https://youtu.be/mwB_4biOhHc)
-0. **Redirect in Flask, Create New Post Page | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/13-Create_New_Post_Page) | [Video On YouTube](https://youtu.be/GsuxVSigdNQ)**
+0. Redirect in Flask, Create New Post Page | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/13-Create_New_Post_Page) | [Video On YouTube](https://youtu.be/GsuxVSigdNQ)
+0. **Showing blog posts | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/14-Showing_blog_posts) | [Video On YouTube](https://youtu.be/CuLAI_zFPvE)**
 
 
 
