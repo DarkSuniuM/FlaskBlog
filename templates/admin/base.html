@@ -1,13 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div>
-    <ul>
-        <li><a href="{{ url_for('admin.index') }}">Dashboard</a></li>
-        <li><a href="{{ url_for('admin.create_post') }}">Add new posts</a></li>
-        <li><a href="{{ url_for('admin.logout') }}">Logout</a></li>
-    </ul>
-</div>
+{% include 'admin/_includes/navigation.html' %}
 {% with messages = get_flashed_messages(True) %}
 {% if messages %}
 <div class="row">
