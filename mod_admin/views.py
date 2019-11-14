@@ -110,4 +110,5 @@ def create_post():
             return redirect(url_for('admin.index'))
         except IntegrityError:
             db.session.rollback()
+            flash('Slug Duplicated.')
     return render_template('admin/create_post.html', form=form)
