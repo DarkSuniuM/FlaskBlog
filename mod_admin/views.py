@@ -52,6 +52,13 @@ def logout():
     return redirect(url_for('admin.login'))
 
 
+@admin.route('/users/', methods=['GET'])
+@admin_only_view
+def list_users():
+    users = User.query.order_by(User.id.desc()).all()
+    return render_template('admin/list_users.html', users=users)
+
+
 @admin.route('/posts/new/', methods=['GET', 'POST'])
 @admin_only_view
 def create_post():
