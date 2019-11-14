@@ -1,7 +1,8 @@
-<div>
-    <ul>
-        <li><a href="{{ url_for('admin.index') }}">Dashboard</a></li>
-        <li><a href="{{ url_for('admin.create_post') }}">Add new posts</a></li>
-        <li><a href="{{ url_for('admin.logout') }}">Logout</a></li>
-    </ul>
-</div>
+<header>
+    <a href="{{ url_for('admin.index') }}" class="logo button">Dashboard</a></li>
+    <a href="{{ url_for('admin.list_posts') }}" class="button">List Posts</a></li>
+    <a href="{{ url_for('admin.create_post') }}" class="button">Create Post</a></li>
+    <a href="{{ url_for('admin.list_users') }}" class="button">List Users</a>
+    <a href="{{ url_for('admin.get_create_user') }}" class="button">Create User</a>
+    <a href="{{ url_for('admin.logout') }}" class="button">Logout</a></li>
+</header>
