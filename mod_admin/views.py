@@ -121,3 +121,13 @@ def list_posts():
     return render_template('admin/list_posts.html', posts=posts)
 
 
+@admin.route('/posts/delete/<int:post_id>/', methods=['GET'])
+@admin_only_view
+def delete_post(post_id):
+    post = Post.query.get_or_404(post_id)
+    db.session.delete(post)
+    db.session.commit()
+    flash('Post Deleted.')
+    return redirect(url_for('admin.list_posts'))
+
+
