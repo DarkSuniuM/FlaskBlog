@@ -6,7 +6,7 @@ from sqlalchemy.exc import IntegrityError
 from app import db
 from mod_blog.forms import CreatePostForm
 from mod_blog.models import Post
-from mod_users.forms import LoginForm
+from mod_users.forms import LoginForm, RegisterForm
 from mod_users.models import User
 
 from . import admin
@@ -57,6 +57,38 @@ def logout():
 def list_users():
     users = User.query.order_by(User.id.desc()).all()
     return render_template('admin/list_users.html', users=users)
+
+
+@admin.route('/users/new/', methods=['GET'])
+@admin_only_view
+def get_create_user():
+    form = RegisterForm()
+    return render_template('admin/create_user.html', form=form)
+
+
+@admin.route('/users/new/', methods=['POST'])
+@admin_only_view
+def post_create_user():
+    form = RegisterForm(request.form)
+    if not form.validate_on_submit():
+        return render_template('admin/create_user.html', form=form)
+    if not form.password.data == form.confirm_password.data:
+        error_msg = 'Password and Confirm Password does not match.'
+        form.password.errors.append(error_msg)
+        form.confirm_password.errors.append(error_msg)
+        return render_template('admin/create_user.html', form=form)
+    new_user = User()
+    new_user.full_name = form.full_name.data
+    new_user.email = form.email.data
+    new_user.set_password(form.password.data)
+    try:
+        db.session.add(new_user)
+        db.session.commit()
+        flash('You created your account successfully.', 'success')
+    except IntegrityError:
+        db.session.rollback()
+        flash('Email is in use.', 'error')
+    return render_template('admin/create_user.html', form=form)
 
 
 @admin.route('/posts/new/', methods=['GET', 'POST'])

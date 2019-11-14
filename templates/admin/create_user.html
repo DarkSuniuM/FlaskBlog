@@ -1,0 +1,46 @@
+{% extends 'admin/base.html' %}
+
+{% block title %}Create User - Admin Dashboard{% endblock %}
+
+{% block page_content %}
+<h1>Register</h1>
+
+<form action="{{ url_for('admin.post_create_user') }}" method="POST">
+    {{ form.hidden_tag() }}
+    Full Name: {{ form.full_name }}
+    {% if form.full_name.errors %}
+    <ul>
+        {% for error in form.full_name.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <br />
+    Email: {{ form.email }}
+    {% if form.email.errors %}
+    <ul>
+        {% for error in form.email.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <br />
+    Password: {{ form.password }}
+    {% if form.password.errors %}
+    <ul>
+        {% for error in form.password.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}<br />
+    Confirm Password: {{ form.confirm_password }}
+    {% if form.confirm_password.errors %}
+    <ul>
+        {% for error in form.confirm_password.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}<br />
+    <input type="submit" value="Register">
+</form>
+{% endblock %}
