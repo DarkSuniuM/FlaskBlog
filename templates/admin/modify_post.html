@@ -1,0 +1,15 @@
+{% extends 'admin/base.html' %}
+
+{% block title %}Modify {{post.title}}{% endblock %}
+
+{% block page_content %}
+<h1>{{ post.title }}</h1>
+<form action="{{ url_for('admin.modify_post', post_id=post.id) }}" method="POST">
+    {{ form.hidden_tag() }}
+    Title: {{ form.title }}<br>
+    Slug: {{ form.slug }}<br>
+    Summary: {{ form.summary }}<br>
+    Content: {{ form.content }}<br>
+    <input type="submit" value="Save">
+</form>
+{% endblock %}

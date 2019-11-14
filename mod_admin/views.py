@@ -4,7 +4,7 @@ from sqlalchemy.exc import IntegrityError
 
 
 from app import db
-from mod_blog.forms import CreatePostForm
+from mod_blog.forms import CreatePostForm, ModifyPostForm
 from mod_blog.models import Post
 from mod_users.forms import LoginForm, RegisterForm
 from mod_users.models import User
@@ -131,3 +131,22 @@ def delete_post(post_id):
     return redirect(url_for('admin.list_posts'))
 
 
+@admin.route('/posts/modify/<int:post_id>/', methods=['GET', 'POST'])
+@admin_only_view
+def modify_post(post_id):
+    post = Post.query.get_or_404(post_id)
+    form = ModifyPostForm(obj=post)
+    if request.method == 'POST':
+        if not form.validate_on_submit():
+            return render_template('admin/modify_post.html', form=form, post=post)
+        post.title = form.title.data
+        post.content = form.content.data
+        post.slug = form.slug.data
+        post.summary = form.summary.data
+        try:
+            db.session.commit()
+            flash('Post modified!')
+        except IntegrityError:
+            db.session.rollback()
+            flash('Slug Duplicated.')
+    return render_template('admin/modify_post.html', form=form, post=post)
