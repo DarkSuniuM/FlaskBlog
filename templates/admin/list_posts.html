@@ -21,6 +21,7 @@
             </td>
             <td data-label="Actions">
                 <a href="{{ url_for('admin.delete_post', post_id=post.id) }}" class="button">Delete</a>
+                <a href="{{ url_for('admin.modify_post', post_id=post.id) }}" class="button">Modify</a>
             </td>
         </tr>
         {% endfor %}
