@@ -112,3 +112,12 @@ def create_post():
             db.session.rollback()
             flash('Slug Duplicated.')
     return render_template('admin/create_post.html', form=form)
+
+
+@admin.route('/posts/', methods=['GET'])
+@admin_only_view
+def list_posts():
+    posts = Post.query.order_by(Post.id.desc()).all()
+    return render_template('admin/list_posts.html', posts=posts)
+
+

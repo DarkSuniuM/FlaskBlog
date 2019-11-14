@@ -1,0 +1,25 @@
+{% extends 'admin/base.html' %}
+
+{% block title %}Posts List - Admin Dashboard{% endblock %}
+
+{% block page_content %}
+<table>
+    <caption>Posts</caption>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for post in posts %}
+        <tr>
+            <td data-label="ID">{{ post.id }}</td>
+            <td data-label="Title">
+                <a href="{{ url_for('blog.single_post', slug=post.slug) }}">{{ post.title }}</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
