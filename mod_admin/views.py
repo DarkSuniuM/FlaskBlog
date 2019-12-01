@@ -4,8 +4,8 @@ from sqlalchemy.exc import IntegrityError
 
 
 from app import db
-from mod_blog.forms import CreatePostForm, ModifyPostForm
-from mod_blog.models import Post
+from mod_blog.forms import CreatePostForm, ModifyPostForm, CategoryForm
+from mod_blog.models import Post, Category
 from mod_users.forms import LoginForm, RegisterForm
 from mod_users.models import User
 
@@ -150,3 +150,63 @@ def modify_post(post_id):
             db.session.rollback()
             flash('Slug Duplicated.')
     return render_template('admin/modify_post.html', form=form, post=post)
+
+
+@admin.route('/categories/new/', methods=['GET', 'POST'])
+@admin_only_view
+def create_category():
+    form = CategoryForm(request.form)
+    if request.method == 'POST':
+        if not form.validate_on_submit():
+            return "1"
+        new_category = Category()
+        new_category.name = form.name.data
+        new_category.slug = form.slug.data
+        new_category.description = form.description.data
+        try:
+            db.session.add(new_category)
+            db.session.commit()
+            flash('Category created!')
+            return redirect(url_for('admin.index'))
+        except IntegrityError:
+            db.session.rollback()
+            flash('Slug Duplicated.')
+    return render_template('admin/create_category.html', form=form)
+
+
+@admin.route('/categories/', methods=['GET'])
+@admin_only_view
+def list_categories():
+    categories = Category.query.order_by(Category.id.desc()).all()
+    print(categories)
+    return render_template('admin/list_categories.html', categories=categories)
+
+
+@admin.route('/categories/delete/<int:category_id>/', methods=['GET'])
+@admin_only_view
+def delete_category(category_id):
+    category = Category.query.get_or_404(category_id)
+    db.session.delete(category)
+    db.session.commit()
+    flash('Category Deleted.')
+    return redirect(url_for('admin.list_categories'))
+
+
+@admin.route('/categories/modify/<int:category_id>/', methods=['GET', 'POST'])
+@admin_only_view
+def modify_category(category_id):
+    category = Category.query.get_or_404(category_id)
+    form = CategoryForm(obj=category)
+    if request.method == 'POST':
+        if not form.validate_on_submit():
+            return render_template('admin/modify_category.html', form=form, category=category)
+        category.name = form.name.data
+        category.description = form.description.data
+        category.slug = form.slug.data
+        try:
+            db.session.commit()
+            flash('Category modified!')
+        except IntegrityError:
+            db.session.rollback()
+            flash('Slug Duplicated.')
+    return render_template('admin/modify_category.html', form=form, category=category)
