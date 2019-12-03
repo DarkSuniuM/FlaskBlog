@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}{{ category_name }} Category{% endblock %}
+
+
+{% block page_content %}
+<h1>{{ category_name }} Category</h1>
+{% for post in posts %}
+<div>
+    <h2><a href="{{ url_for('blog.single_post', slug=post.slug) }}">{{ post.title }}</a></h2>
+    <p>{{ post.summary or post.content | truncate(64, true, '...')}}</p>
+</div>
+{% endfor %}
+{% endblock %}

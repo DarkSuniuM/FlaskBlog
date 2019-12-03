@@ -2,3 +2,9 @@
     <a class="button" href="{{ url_for('users.register') }}">Register</a>
     <a class="button" href="{{ url_for('blog.index') }}">Blog</a>
 </header>
+<div>
+    <form action="{{ url_for('blog.search_blog') }}" method="get">
+        {{ search_form.search_query }}
+        <input type="submit" value="Search">
+    </form>
+</div>
