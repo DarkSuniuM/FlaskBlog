@@ -21,7 +21,8 @@ We are going to develop a blog using Flask, Each episode, has it's own branch
 0. Modify database data, More Admin Panel Pages. | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/15-Modify_database_data) | [Video On YouTube](https://youtu.be/pMIFBuTtlkQ)
 0. Add Category {Create, List, Modify, Delete} Pages. | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/16-Create_Category_Pages) | [Video On YouTube](https://youtu.be/oD8_br3pwQM)
 0. Customized WTForms Field | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/17-Customized_WTForms_Field) | [Video On YouTube](https://youtu.be/8NYPgzPDk3I)
-0. **Search ability in posts | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/18-Search_ability_in_posts) | [Video On YouTube](https://youtu.be/uVhte6nWmuk)**
+0. Search ability in posts | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/18-Search_ability_in_posts) | [Video On YouTube](https://youtu.be/uVhte6nWmuk)
+0. **Search ability in posts | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/19-Getting_started_with_static) | [Video On YouTube](https://youtu.be/-5CrrhTYc10)**
 
 
 
