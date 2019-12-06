@@ -1,0 +1,11 @@
+{% extends 'admin/base.html' %}
+
+{% block title %}Upload File{% endblock %}
+{% block page_content %}
+<h1>Upload File</h1>
+<form action="{{ url_for('admin.upload_file') }}" method="POST" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    File: {{ form.file }}<br>
+    <input type="submit" value="Upload File">
+</form>
+{% endblock %}

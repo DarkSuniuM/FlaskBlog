@@ -1,6 +1,8 @@
 from flask import (abort, flash, redirect, render_template, request, session,
                    url_for)
 from sqlalchemy.exc import IntegrityError
+from werkzeug.utils import secure_filename
+import uuid
 
 
 from app import db
@@ -8,6 +10,8 @@ from mod_blog.forms import PostForm, CategoryForm
 from mod_blog.models import Post, Category
 from mod_users.forms import LoginForm, RegisterForm
 from mod_users.models import User
+from mod_uploads.models import File
+from mod_uploads.forms import FileUploadForm
 
 from . import admin
 from .utils import admin_only_view
@@ -218,3 +222,25 @@ def modify_category(category_id):
             db.session.rollback()
             flash('Slug Duplicated.')
     return render_template('admin/modify_category.html', form=form, category=category)
+
+
+
+@admin.route('/library/upload', methods=['GET', 'POST'])
+@admin_only_view
+def upload_file():
+    form = FileUploadForm()
+    if request.method == 'POST':
+        if not form.validate_on_submit():
+            return "1"
+        filename = f'{uuid.uuid1()}_{secure_filename(form.file.data.filename)}'
+        new_file = File()
+        new_file.filename = filename
+        try:
+            db.session.add(new_file)
+            db.session.commit()
+            form.file.data.save(f'static/uploads/{filename}')
+            flash(f'File Uploaded on {url_for("static", filename="uploads/"+filename, _external=True)}')
+        except IntegrityError:
+            db.session.rollback()
+            flash('Upload failed', 'error')
+    return render_template('admin/upload_file.html', form=form)
