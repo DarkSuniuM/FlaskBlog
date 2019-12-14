@@ -24,7 +24,8 @@ We are going to develop a blog using Flask, Each episode, has it's own branch
 0. Search ability in posts | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/18-Search_ability_in_posts) | [Video On YouTube](https://youtu.be/uVhte6nWmuk)
 0. Getting started with static files | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/19-Getting_started_with_static) | [Video On YouTube](https://youtu.be/-5CrrhTYc10)
 0. File Uploader | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/20-File_Uploader) | [Video On YouTube](https://youtu.be/u2ai7sT5v0o)
-0. **Sending mail with Flask | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/21-Sending_mail_with_Flask) | [Video On YouTube](https://youtu.be/iqA94dknt3U)**
+0. Sending mail with Flask | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/21-Sending_mail_with_Flask) | [Video On YouTube](https://youtu.be/iqA94dknt3U)
+0. **Using Redis for storing tokens in Flask | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/22-Using_Redis_for_storing_tokens_in_Flask) | [Video On YouTube](https://youtu.be/Z5fAL3D-2aM)**
 
 
 
@@ -42,3 +43,14 @@ We are going to develop a blog using Flask, Each episode, has it's own branch
 **[Playlist on YouTube](https://www.youtube.com/playlist?list=PLdUn5H7OTUk1WYCrDJpNGpJ2GFWd7yZaw)**
 
 Ask your questions on the comments section in YouTube, I try to answer the ones I can!
+
+
+## Sponcers
+
+### HostHey
+
+You can visit their website: https://hosthey.net
+
+They gave us a dicount code which you can use for a month of Free Python Shared Host!
+
+- EP 34 (21 of this project), Provided server to run mail server.
