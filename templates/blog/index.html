@@ -5,10 +5,15 @@
 
 {% block page_content %}
 <h1>Blog</h1>
-{% for post in posts %}
+{% for post in posts.items %}
 <div>
     <h2><a href="{{ url_for('blog.single_post', slug=post.slug) }}">{{ post.title }}</a></h2>
     <p>{{ post.summary or post.content | truncate(64, true, '...')}}</p>
 </div>
 {% endfor %}
+
+{% for page in range(1, posts.pages+1) %}
+<span style="background-color: red; padding: 10px;"><a href="{{ url_for('blog.index', p=page) }}">{{ page }}</a></span>
+{% endfor %}
+
 {% endblock %}
