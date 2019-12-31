@@ -25,7 +25,8 @@ We are going to develop a blog using Flask, Each episode, has it's own branch
 0. Getting started with static files | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/19-Getting_started_with_static) | [Video On YouTube](https://youtu.be/-5CrrhTYc10)
 0. File Uploader | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/20-File_Uploader) | [Video On YouTube](https://youtu.be/u2ai7sT5v0o)
 0. Sending mail with Flask | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/21-Sending_mail_with_Flask) | [Video On YouTube](https://youtu.be/iqA94dknt3U)
-0. **Using Redis for storing tokens in Flask | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/22-Using_Redis_for_storing_tokens_in_Flask) | [Video On YouTube](https://youtu.be/Z5fAL3D-2aM)**
+0. Using Redis for storing tokens in Flask | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/22-Using_Redis_for_storing_tokens_in_Flask) | [Video On YouTube](https://youtu.be/Z5fAL3D-2aM)
+0. **Pagination | [Branch On Github](https://github.com/DarkSuniuM/FlaskBlog/tree/23-Pagination) | [Video On YouTube](https://youtu.be/15uoQons8wg)**
 
 
 
@@ -54,3 +55,12 @@ You can visit their website: https://hosthey.net
 They gave us a dicount code which you can use for a month of Free Python Shared Host!
 
 - EP 34 (21 of this project), Provided server to run mail server.
+
+
+### AzarData
+
+You can visit their website: https://azardata.net
+
+They gave us a dicount code which gives you 20% off of the price, it works on everything expect domains!
+
+- EP 36 (23 of this project), Provided server to run mail server.
